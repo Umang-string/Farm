@@ -852,6 +852,21 @@ html { scroll-padding-top: var(--masthead-height, 0px); }
   .hero-choices button:last-child::after { justify-self: start; margin-left: 4px; }
   .products-panel h2 br { display: none; }
   .category-lineup { overscroll-behavior-x: contain; }
+  .product-retailers {
+    inset-block-start: auto;
+    padding: clamp(2rem, 11vw, 3rem) .75rem .75rem;
+  }
+  .product-retailer-label { margin-bottom: 1.125rem; font-size: 1rem; }
+  .product-retailer-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(3.5rem, 16vw, 4.5rem);
+    max-width: 23rem;
+    margin-inline: auto;
+  }
+  .product-retailer-buttons button { min-width: 0; padding: .25rem 0; gap: .625rem; }
+  .product-retailer-buttons img { width: min(100%, 9.625rem); }
+  .product-retailer-country { font-size: .9375rem; }
   .awning {
     min-height: 100px;
     padding: .45rem 17.5% 1rem;
@@ -890,9 +905,11 @@ html { scroll-padding-top: var(--masthead-height, 0px); }
   .footer-certifications { justify-self: center; text-align: center; }
   .footer-certifications img { width: min(100%, 19rem); margin-inline: auto; }
   .retail::before {
-    height: clamp(8rem, 27vw, 11rem);
-    background-size: 185% auto;
-    background-position: 18% 38%;
+    height: auto;
+    aspect-ratio: 20 / 9;
+    background:
+      linear-gradient(to bottom, #cfeaf5, transparent 8%, transparent 92%, var(--retail-navy)),
+      url("retail-landscape.jpg") 12.5% 28.5% / 300% auto no-repeat;
   }
   .farm-layout { width: 90%; }
   .farm { padding-block: 2rem; }
