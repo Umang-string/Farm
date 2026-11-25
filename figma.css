@@ -123,9 +123,9 @@ html { scroll-padding-top: var(--masthead-height, 0px); }
 .logo { display: block; justify-self: center; width: max(7rem, calc(220 * var(--content-unit))); }
 .logo img { width: 100%; height: auto; }
 .hero-carousel { display: grid; position: relative; }
+.hero-carousel > picture { grid-area: 1 / 1; min-width: 0; }
 .hero {
   --hero-image: url("mana-ko-hero.webp");
-  grid-area: 1 / 1;
   width: 100%;
   min-width: 0;
   height: auto;
@@ -834,6 +834,8 @@ html { scroll-padding-top: var(--masthead-height, 0px); }
 }
 
 @media (max-width: 700px) {
+  .hero { aspect-ratio: 4 / 5; padding-top: 0; background: none; }
+  .hero-choices button { width: 44px; height: 44px; }
   .products-panel h2 br { display: none; }
   .awning { font-size: .75rem; background-size: max(100%, 850px) 100%; }
   .navigation { height: auto; min-height: 76px; grid-template-columns: 1fr 1fr; gap: .25rem .7rem; padding: .4rem .8rem .65rem; }

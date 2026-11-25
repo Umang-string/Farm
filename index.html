@@ -11,7 +11,7 @@
   <meta property="og:description" content="From cow’s milk ghee to lapsi achar, discover the foods Manaram Farm makes in Nepal and the retailers that carry them in Nepal and the United States.">
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="typography.css">
-  <link rel="stylesheet" href="figma.css?v=89">
+  <link rel="stylesheet" href="figma.css?v=90">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -75,8 +75,14 @@
   </header>
   <main>
     <section class="hero-carousel" aria-label="Featured Mana Ko foods">
-      <img class="hero is-active" src="mana-ko-hero.webp" width="2060" height="763" alt="Mana Ko. Traditional taste. Innovative make. A woman with a selection of Mana Ko products." fetchpriority="high">
-      <img class="hero hero-alternate" src="mana-ko-hero-lavender.png" width="2061" height="763" alt="A woman beside Mana Ko ghee, chiura granola, butter, and mixed achar." aria-hidden="true">
+      <picture>
+        <source media="(max-width: 700px)" srcset="mana-ko-hero-mobile.webp">
+        <img class="hero is-active" src="mana-ko-hero.webp" width="2060" height="763" alt="Mana Ko. Traditional taste. Innovative make. A woman with a selection of Mana Ko products." fetchpriority="high">
+      </picture>
+      <picture>
+        <source media="(max-width: 700px)" srcset="mana-ko-hero-lavender-mobile.webp">
+        <img class="hero hero-alternate" src="mana-ko-hero-lavender.png" width="2061" height="763" alt="A woman beside Mana Ko ghee, chiura granola, butter, and mixed achar." aria-hidden="true">
+      </picture>
       <div class="hero-choices" role="group" aria-label="Choose a banner" hidden>
         <button type="button" aria-label="Show the Mana Ko product range" aria-pressed="true"></button>
         <button type="button" aria-label="Show ghee, granola, butter and achar" aria-pressed="false"></button>
