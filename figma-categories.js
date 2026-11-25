@@ -67,8 +67,9 @@
     categories.style.setProperty('--category-pin-top', pinnedTop + 'px');
     const overflow = lineup.scrollWidth - lineup.clientWidth;
     const lineupTop = lineup.getBoundingClientRect().top - panel.getBoundingClientRect().top;
-    const canPin = pinnedTop >= headerHeight - 1 ||
-      (window.innerWidth >= 1024 && pinnedTop + lineupTop >= headerHeight);
+    // On phones, leave horizontal browsing to the swipeable row.
+    const canPin = panel.clientWidth > 700 && (pinnedTop >= headerHeight - 1 ||
+      (window.innerWidth >= 1024 && pinnedTop + lineupTop >= headerHeight));
     travel = !scrollShowcaseComplete && !reducedMotion.matches && canPin && overflow > 1 ? overflow : 0;
     categories.style.setProperty('--category-travel', (travel ? travel + settleSpace : 0) + 'px');
     categories.classList.toggle('is-scroll-pinned', travel > 0);
