@@ -900,7 +900,10 @@ html { scroll-padding-top: var(--masthead-height, 0px); }
   .farm-art { width: min(82%, 290px); margin-inline: auto; }
   .farm-info { padding-top: calc(10 * var(--unit)); }
   .farm-intro, .learn { margin-top: 1rem; }
-  .mana-ko { width: 90px; margin-top: 1rem; }
+  .mana-ko { width: clamp(136px, 40vw, 164px); margin-top: 1rem; }
+  .farm-trust { margin-top: 1.25rem; }
+  .farm-trust figcaption { flex-direction: column; gap: .375rem; text-align: center; text-wrap: balance; }
+  .farm-trust .certifications { margin-top: .5rem; }
   .features { --harvest-top: var(--mobile-nav-height); }
   .features-panel { padding: 2.5rem 6%; }
   .promo { width: 100%; gap: .6rem; padding: 1rem; }
