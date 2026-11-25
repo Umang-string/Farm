@@ -904,6 +904,7 @@ html { scroll-padding-top: var(--masthead-height, 0px); }
   .footer-lower { grid-template-columns: 1fr; row-gap: 2.5rem; }
   .footer-certifications { justify-self: center; text-align: center; }
   .footer-certifications img { width: min(100%, 19rem); margin-inline: auto; }
+  .footer-certifications figcaption { font-size: .75rem; }
   .retail::before {
     height: auto;
     aspect-ratio: 20 / 9;
