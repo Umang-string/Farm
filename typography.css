@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Lexend;
+  src: url("lexend-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Figtree;
+  src: url("figtree-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+:root {
+  font-family: Lexend, Arial, sans-serif;
+  --text-display: clamp(2.5rem, 1.85rem + 3.15vw, 5.25rem);
+  --text-section: clamp(1.75rem, 1.35rem + 1.65vw, 3.25rem);
+  --text-card: clamp(1.125rem, 1rem + .65vw, 1.625rem);
+  --text-lead: clamp(1.0625rem, .98rem + .42vw, 1.375rem);
+  --text-body: clamp(1rem, .97rem + .16vw, 1.125rem);
+  --text-small: clamp(.875rem, .835rem + .15vw, 1rem);
+  --text-action: clamp(.9375rem, .91rem + .15vw, 1.0625rem);
+}
+
+body { font-size: var(--text-body); }
+button, input, select, textarea { font-family: inherit; }
+.main-nav, .header-actions, .st-top, .navigation { font-family: Figtree, Arial, sans-serif; }
