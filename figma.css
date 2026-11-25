@@ -839,16 +839,17 @@ html { scroll-padding-top: var(--masthead-height, 0px); }
   .hero-choices button { width: 44px; height: 44px; }
   .products-panel h2 br { display: none; }
   .awning {
-    min-height: 86px;
+    min-height: 100px;
     padding: .45rem 17.5% 1rem;
     font-size: clamp(.8125rem, 3.3vw, .875rem);
     background-image: url("utility-bar-farm-mobile.svg");
     background-size: 100% 100%;
   }
   .awning-spotlights { min-width: 0; max-width: 100%; }
-  .awning-spotlight { display: grid; grid-template-columns: auto auto; gap: .35rem .5rem; }
+  .awning-spotlight { display: grid; justify-items: center; row-gap: .35rem; }
+  .awning-sticker { display: none; }
   .awning-message { text-wrap: balance; }
-  .awning a { grid-column: 1 / -1; justify-self: center; padding: .48em 1em; }
+  .awning a { padding: .48em 1em; }
   .navigation { height: auto; min-height: var(--mobile-nav-height); grid-template-columns: 1fr 1fr; gap: .5rem .875rem; padding: .75rem clamp(1rem, 4vw, 1.5rem); }
   .logo { grid-row: 1; grid-column: 1 / -1; width: clamp(148px, 40vw, 180px); }
   .navigation nav { width: 100%; grid-template-columns: auto auto; justify-content: space-around; }
@@ -891,6 +892,6 @@ html { scroll-padding-top: var(--masthead-height, 0px); }
   .promo { width: 100%; gap: .6rem; padding: 1rem; }
 }
 @media (min-width: 560px) and (max-width: 700px) {
-  .awning { min-height: 68px; }
+  .awning { min-height: 80px; }
   .awning-spotlight { display: flex; gap: .65rem; }
 }
