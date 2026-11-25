@@ -834,12 +834,23 @@ html { scroll-padding-top: var(--masthead-height, 0px); }
 }
 
 @media (max-width: 700px) {
+  :root { --mobile-nav-height: clamp(88px, 23vw, 100px); }
   .hero { aspect-ratio: 4 / 5; padding-top: 0; background: none; }
   .hero-choices button { width: 44px; height: 44px; }
   .products-panel h2 br { display: none; }
-  .awning { font-size: .75rem; background-size: max(100%, 850px) 100%; }
-  .navigation { height: auto; min-height: 76px; grid-template-columns: 1fr 1fr; gap: .25rem .7rem; padding: .4rem .8rem .65rem; }
-  .logo { grid-row: 1; grid-column: 1 / -1; width: 106px; }
+  .awning {
+    min-height: 86px;
+    padding: .45rem 17.5% 1rem;
+    font-size: clamp(.8125rem, 3.3vw, .875rem);
+    background-image: url("utility-bar-farm-mobile.svg");
+    background-size: 100% 100%;
+  }
+  .awning-spotlights { min-width: 0; max-width: 100%; }
+  .awning-spotlight { display: grid; grid-template-columns: auto auto; gap: .35rem .5rem; }
+  .awning-message { text-wrap: balance; }
+  .awning a { grid-column: 1 / -1; justify-self: center; padding: .48em 1em; }
+  .navigation { height: auto; min-height: var(--mobile-nav-height); grid-template-columns: 1fr 1fr; gap: .5rem .875rem; padding: .75rem clamp(1rem, 4vw, 1.5rem); }
+  .logo { grid-row: 1; grid-column: 1 / -1; width: clamp(148px, 40vw, 180px); }
   .navigation nav { width: 100%; grid-template-columns: auto auto; justify-content: space-around; }
   .navigation .menu-toggle:not([hidden]) {
     display: grid;
@@ -875,7 +886,11 @@ html { scroll-padding-top: var(--masthead-height, 0px); }
   .farm-info { padding-top: calc(10 * var(--unit)); }
   .farm-intro, .learn { margin-top: 1rem; }
   .mana-ko { width: 90px; margin-top: 1rem; }
-  .features { --harvest-top: 76px; }
+  .features { --harvest-top: var(--mobile-nav-height); }
   .features-panel { padding: 2.5rem 6%; }
   .promo { width: 100%; gap: .6rem; padding: 1rem; }
+}
+@media (min-width: 560px) and (max-width: 700px) {
+  .awning { min-height: 68px; }
+  .awning-spotlight { display: flex; gap: .65rem; }
 }
